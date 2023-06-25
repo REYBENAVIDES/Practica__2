@@ -38,9 +38,10 @@ public class MainActivityListaUsuario extends AppCompatActivity implements Async
             JSONObject user= JSONlista.getJSONObject(i);
             lstusuarios = lstusuarios + "\n" +
                     user.getString("firstName").toString() + ", " +
-                    user.getString("Age").toString() + ", ";
+                    user.getString("age").toString() + ", " +
+                    user.getString("email").toString();
         }
-        txtusuarios.setText("Lista de Usuarios" + lstusuarios);
+        txtusuarios.setText(lstusuarios);
 
     }
 }
